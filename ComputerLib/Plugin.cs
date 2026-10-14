@@ -4,7 +4,7 @@ using HarmonyLib;
 
 namespace ComputerLib;
 
-[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInPlugin("tech.lapiscreates.ComputerLib", "ComputerLib", "1.0.0")]
 public class Plugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
