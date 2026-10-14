@@ -11,14 +11,13 @@ public abstract class Screen
     // text that actual shows the content
     private readonly StringBuilder text = new StringBuilder();
 
-    // name that shows on left hand side of gc
+    // unfiltered name that is filtered into MenuName
     public abstract string ScreenName { get; }
 
     // set taht content text
     public StringBuilder Text => text;
 
-    // what actually lands in the left menu, clamped so one long name cannot widen
-    // the shared padding and wrap every row's pointer onto its own line
+    // what actually lands in the left menu, since we need to clean it up on render
     internal string MenuName { get; set; }
 
     // the page this screen is bound to, assigned by ComputerUtils on registration
